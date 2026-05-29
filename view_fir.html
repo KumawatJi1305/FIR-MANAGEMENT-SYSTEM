@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All FIR Reports - WAKAD POLICE STATION</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #1F1C2C, #928DAB);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .location {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #add8e6;
+        }
+
+        table {
+            width: 95%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 14px 18px;
+            text-align: center;
+            font-size: 1em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            background-color: #e63946;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .back-link {
+            margin-top: 30px;
+            display: inline-block;
+            color: #add8e6;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        a.edit-link {
+            color: #00ffff;
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th {
+                text-align: left;
+            }
+            td {
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>All FIR Reports</h1>
+    <div class="location">📍 WAKAD POLICE STATION</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Complaint</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fir in data %}
+            <tr>
+                <td>{{ fir[0] }}</td>
+                <td>{{ fir[1] }}</td>
+                <td>{{ fir[2] }}</td>
+                <td>{{ fir[3] }}</td>
+                <td>{{ fir[4] }}</td>
+                <td>{{ fir[5] }}</td>  <!-- Status -->
+                <td>{{ fir[6] }}</td>  <!-- Date -->
+                <td><a href="/edit/{{ fir[0] }}" class="edit-link">Edit</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="/" class="back-link">🔙 Back to Home</a>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File FIR - Wakad Police Station</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #FFD700;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        input[type="submit"] {
+            background-color: #e63946;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d62828;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #87CEEB;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📄 File a New FIR</h1>
+
+    <form action="/file_fir" method="POST">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <input type="text" name="address" placeholder="Address" required>
+        <textarea name="complaint" placeholder="Write your complaint..." rows="5" required></textarea>
+        <input type="date" name="date" required>
+        <input type="submit" value="Submit FIR">
+    </form>
+
+    <a href="/" class="back-link">🔙 Back to Home</a>
+
+</body>
+</html>

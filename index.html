@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wakad Police Station | FIR Management System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+            color: #fff;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+        .location {
+            font-size: 1.2em;
+            color: #87CEFA;
+            margin-bottom: 40px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .quote {
+            margin-top: 40px;
+            font-style: italic;
+            color: #ddd;
+        }
+        .badge {
+            font-size: 4em;
+            color: #FFD700;
+            animation: pulse 2s infinite;
+        }
+        .siren {
+            margin-top: 20px;
+            animation: rotateSiren 1.5s infinite;
+        }
+        .footer {
+            margin-top: 60px; /* 👈 added spacing */
+            font-size: 1em;
+            color: #aaa;
+        }
+
+        @keyframes pulse {
+            0% { text-shadow: 0 0 5px #FFD700; }
+            50% { text-shadow: 0 0 20px #FFD700; }
+            100% { text-shadow: 0 0 5px #FFD700; }
+        }
+
+        @keyframes rotateSiren {
+            0% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+            100% { transform: rotate(-5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="badge">👮‍♂️</div>
+    <h1>FIR MANAGEMENT SYSTEM</h1>
+    <div class="location">📍 WAKAD POLICE STATION</div>
+
+    <div class="buttons">
+        <a href="/file_fir"><button class="btn">📝 File FIR</button></a>
+        <a href="/login"><button class="btn">🔐 View FIRs</button></a>
+    </div>
+
+    <div class="siren">🚨</div>
+    <div class="quote">"To Protect and To Serve — We Stand With Justice"</div>
+
+    <div class="footer">
+        Designed & created with ❤️ : <strong>HiKe CodeX</strong>
+    </div>
+</body>
+</html>
