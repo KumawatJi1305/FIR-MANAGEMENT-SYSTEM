@@ -7,7 +7,7 @@ app.secret_key = 'your_secret_key'
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="080512",
+    password="Enter your sql password",
     database="fir_hns"
 )
 # Home Route
